@@ -13,16 +13,30 @@ class MakeItRainState extends State<MakeItRain>{
 
 
   var Money = 0;
+  var Rich;
+  void _Rich(){
+
+      if (Money<= 2000){
+        Rich = "poor";
+      }else{
+        Rich = "Rich";
+      }
+  }
   void _Rain(){
     setState(() {
       Money=Money+100;
+      _Rich();
     });
   }
   void _Reset(){
     setState(() {
       Money=0;
+      _Rich();
     });
   }
+
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -43,7 +57,7 @@ class MakeItRainState extends State<MakeItRain>{
             //tital
 
             new Center(
-             child: new Text("Get Rich!",
+             child: new Text("$Rich",
                 style: new TextStyle(
                   color: Colors.grey,
                   fontWeight: FontWeight.w400,
@@ -75,7 +89,7 @@ class MakeItRainState extends State<MakeItRain>{
               child: new FlatButton(
                   color: Colors.black,
                   textColor: Colors.white,
-                  onPressed: _Rain,
+                  onPressed: _Reset,
                   child: new Text("Reset ",
                     style: new TextStyle(
                       fontSize: 20,

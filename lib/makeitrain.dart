@@ -64,10 +64,11 @@ class MakeItRainState extends State<MakeItRain>{
                   fontSize: 40,
                 ),),
             ),
+
             new Expanded(child:new Center(
               child: new Text('\$$Money',
                 style: new TextStyle(
-                  color: Colors.greenAccent,
+                  color:  Money < 2000 ? Colors.greenAccent : Money < 3000 ? Colors.blue : Colors.black ,
                   fontWeight: FontWeight.w800,
                   fontSize: 40,
                 ),),

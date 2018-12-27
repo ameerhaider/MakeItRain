@@ -75,7 +75,7 @@ class MakeItRainState extends State<MakeItRain>{
               child: new FlatButton(
                   color: Colors.black,
                   textColor: Colors.white,
-                  onPressed: _Reset,
+                  onPressed: _Rain,
                   child: new Text("Reset ",
                     style: new TextStyle(
                       fontSize: 20,

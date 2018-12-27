@@ -59,7 +59,7 @@ class MakeItRainState extends State<MakeItRain>{
             new Center(
              child: new Text("$Rich",
                 style: new TextStyle(
-                  color: Colors.grey,
+                  color:Rich == "poor" ? Colors.red : Colors.black,
                   fontWeight: FontWeight.w400,
                   fontSize: 40,
                 ),),
